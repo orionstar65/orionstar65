@@ -1,0 +1,113 @@
+{
+  "username": "orionstar65",
+  "role": "Senior Software Engineer",
+  "eyebrow": "ENGINEERING // SYSTEM ONLINE",
+  "tagline": "Full Stack | Data Platforms | Production LLM & RAG Solutions | Agentic AI Development",
+  "intro": "I design, build, and scale full-stack software — from polished user experiences to resilient services, intelligent workflows, and cloud infrastructure.",
+  "focus": [
+    "AI & Automation",
+    "Distributed Systems",
+    "Full-Stack Products",
+    "Cloud Architecture"
+  ],
+  "principles": [
+    "Design for clarity",
+    "Engineer for reliability",
+    "Automate thoughtfully"
+  ],
+  "skills": {
+    "Frontend": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Web UX"
+    ],
+    "Backend": [
+      "Node.js",
+      "Python",
+      "Go",
+      "REST / GraphQL",
+      "PostgreSQL"
+    ],
+    "Cloud & Data": [
+      "AWS / GCP",
+      "Docker",
+      "Kubernetes",
+      "Redis / Kafka",
+      "CI/CD"
+    ],
+    "AI & Automation": [
+      "LLM Integrations",
+      "RAG Pipelines",
+      "Ollama",
+      "Playwright",
+      "AI Workflows"
+    ]
+  },
+  "projects": [
+    {
+      "slug": "roleward",
+      "title": "Roleward",
+      "type": "PRIVATE PRODUCT / CASE STUDY",
+      "subtitle": "Local-first AI-powered job-search workspace",
+      "details": "Desktop automation, private AI inference, application tracking, and interview prep workflows.",
+      "tags": [
+        "Ollama",
+        "Playwright",
+        "Electron"
+      ],
+      "link": "",
+      "accent": "cyan"
+    },
+    {
+      "slug": "connectors",
+      "title": "Enterprise Connectors",
+      "type": "SELECTED ENGINEERING EXPERIENCE",
+      "subtitle": "Secure access to enterprise knowledge sources",
+      "details": "Integration services, content ingestion, API reliability, and retrieval-oriented systems.",
+      "tags": [
+        "RAG",
+        "TypeScript",
+        "Cloud APIs"
+      ],
+      "link": "",
+      "accent": "purple"
+    },
+    {
+      "slug": "travel",
+      "title": "Travel Platforms",
+      "type": "SELECTED ENGINEERING EXPERIENCE",
+      "subtitle": "Complex booking and change-management workflows",
+      "details": "Scalable backend services, real-time updates, orchestration, and resilient integrations.",
+      "tags": [
+        "Microservices",
+        "AWS",
+        "APIs"
+      ],
+      "link": "",
+      "accent": "cyan"
+    },
+    {
+      "slug": "lab",
+      "title": "Engineering Lab",
+      "type": "PUBLIC GITHUB WORK",
+      "subtitle": "Prototypes, experiments, and useful tooling",
+      "details": "Selected public repositories, engineering experiments, and useful tools.",
+      "tags": [
+        "Open Source",
+        "Prototypes",
+        "Tools"
+      ],
+      "link": "https://github.com/orionstar65?tab=repositories",
+      "accent": "purple"
+    }
+  ],
+  "links": {
+    "github": "https://github.com/orionstar65",
+    "portfolio": "",
+    "linkedin": "",
+    "email": ""
+  },
+  "greeting": "Hello, I am Senior Software Engineer"
+}

@@ -1,0 +1,26 @@
+name: Validate GitHub profile
+
+on:
+  push:
+    paths:
+      - 'README.md'
+      - 'assets/**'
+      - 'scripts/**'
+      - 'config/**'
+      - '.github/workflows/**'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify generated profile assets are up to date
+        run: python3 scripts/build_profile.py --check
+      - name: Validate local links, SVG XML and required files
+        run: python3 scripts/validate.py

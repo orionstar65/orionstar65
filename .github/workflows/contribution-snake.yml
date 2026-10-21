@@ -1,0 +1,36 @@
+name: Generate contribution snake
+
+on:
+  schedule:
+    - cron: '37 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-generated-assets
+  cancel-in-progress: false
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create snake SVGs from real GitHub contributions
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/generated/snake-light.svg?palette=github-light&color_snake=#0089B6&color_dots=#E8F3FA,#B5E6F1,#7AD3E7,#29B5D4,#087EAE
+            assets/generated/snake-dark.svg?palette=github-dark&color_snake=#39D7F4&color_dots=#0D1F35,#193E5B,#1E7290,#24AAC6,#8BEAFF
+      - name: Commit only changed contribution SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/generated/snake-dark.svg assets/generated/snake-light.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(profile): refresh contribution snake"
+            git push
+          fi
